@@ -152,11 +152,11 @@ public class GameListeners implements Listener {
         			wools.remove(p);
         			//TODO: Add image message thing.
         			Bukkit.broadcastMessage(p.getTeam().getColor()+p.getName() + ChatColor.GOLD+" has capture a wool for team "
-        					+p.getTeam().getColoredName()+ChatColor.GOLD+"." +p.getTeam().capturedWools + "/3 remaining!");
+        					+p.getTeam().getColoredName()+ChatColor.GOLD+". " +p.getTeam().capturedWools + "/3 remaining!");
         			for(Player aP : Bukkit.getOnlinePlayers())
         			{
         				AnnounceBar.getInstance().getBar().sendToPlayer(aP, p.getTeam().getColor()+p.getName() + ChatColor.GOLD+" has capture a wool for team "
-            					+p.getTeam().getColoredName()+ChatColor.GOLD+"." +p.getTeam().capturedWools + "/3 remaining!", 100 - (p.getTeam().capturedWools*10));
+            					+p.getTeam().getColoredName()+ChatColor.GOLD+". " +p.getTeam().capturedWools + "/3 remaining!", 100 - (p.getTeam().capturedWools*10));
         			}
         			CTW.getInstance().getServer().getPluginManager().callEvent(new WoolCaptureEvent(p, o));
         			Game.checkGame();
