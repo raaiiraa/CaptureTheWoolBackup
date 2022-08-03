@@ -49,7 +49,6 @@ public enum Menus {
 								@Override
 								public void onItemClick(CTWPlayer p,
 										ItemStack item) {
-									System.out.println("*click*");
 									CTW.getInstance().checkTeam(CTWTeam.RGB, p);
 									p.getPlayer().closeInventory();
 									
@@ -68,7 +67,6 @@ public enum Menus {
 								@Override
 								public void onItemClick(CTWPlayer p,
 										ItemStack item) {
-									System.out.println("*click*");
 									CTW.getInstance().checkTeam(CTWTeam.CMY, p);
 									p.getPlayer().closeInventory();
 									

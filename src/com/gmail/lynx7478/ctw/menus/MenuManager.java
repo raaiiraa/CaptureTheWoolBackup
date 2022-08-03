@@ -65,18 +65,15 @@ public class MenuManager implements Listener {
 						{
 							if(s.equals(Menus.ROLESELECTOR))
 							{
-								e.getWhoClicked().sendMessage("role selector");
 								e.getWhoClicked().closeInventory();
 								CTWPlayer p = CTWPlayer.getCTWPlayer(e.getWhoClicked().getUniqueId());
 								for (Role r : RoleManager.getRoles()) {
-									e.getWhoClicked().sendMessage("cycling - "+r.getName());
 									if (ChatColor.stripColor(e.getCurrentItem().getItemMeta().getDisplayName()).equals(ChatColor.stripColor(r.getFinalIcon().getItemMeta().getDisplayName()))) {
-										e.getWhoClicked().sendMessage("found item");
 										if (!p.hasTeam()) {
-											e.getWhoClicked().sendMessage("no team");
 											p.sendMessage(ChatColor.RED + "You must have a team in order to select a role.");
 											return;
 										}
+										//TODO: Add role limits again.
 					/*					if (p.getTeam().getRoles().get(r) >= r.getLimitPerTeam()) {
 											p.sendMessage(ChatColor.RED + "There are too many people with that role! Please select another role.");
 											return;
