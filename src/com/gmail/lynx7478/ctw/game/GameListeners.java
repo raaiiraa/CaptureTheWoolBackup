@@ -282,6 +282,8 @@ public class GameListeners implements Listener {
     			}
     		}
     	}
+    	
+    	//TODO: Block regeneration.
     }
     
     @EventHandler
