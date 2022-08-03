@@ -23,6 +23,7 @@ import com.gmail.lynx7478.ctw.game.roles.Role;
 import com.gmail.lynx7478.ctw.game.roles.RoleListener;
 import com.gmail.lynx7478.ctw.game.roles.RoleManager;
 import com.gmail.lynx7478.ctw.managers.AFKManager;
+import com.gmail.lynx7478.ctw.managers.BlockManager;
 import com.gmail.lynx7478.ctw.mapbuilder.MapBuilder;
 import com.gmail.lynx7478.ctw.menus.MenuManager;
 
@@ -49,6 +50,9 @@ public class CTW extends JavaPlugin {
 
         // The game listeners.
         new GameListeners(this);
+        
+        // The block manager.
+        this.getServer().getPluginManager().registerEvents(new BlockManager(), this);
 
         // Loading the main configuration file.
         //TODO: Fix config, out of place.
