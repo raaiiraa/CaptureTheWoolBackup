@@ -8,6 +8,7 @@ import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 
 import com.gmail.lynx7478.ctw.CTW;
@@ -50,6 +51,12 @@ public class Lobby {
                 s.getDouble("X"),
                 s.getDouble("Y"),
                 s.getDouble("Z"));
+        
+        // Clear items on ground.
+        for(Entity e : loc.getWorld().getEntities())
+        {
+        	e.remove();
+        }
     }
 
     public static void saveLobby() throws IOException {

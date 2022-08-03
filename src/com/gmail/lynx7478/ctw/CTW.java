@@ -106,6 +106,7 @@ public class CTW extends JavaPlugin {
             p.setScoreboard(ScoreboardAPI.getScoreboard());
             Lobby.sendToLobby(p);
         }
+        
     }
 
     public void onDisable()
