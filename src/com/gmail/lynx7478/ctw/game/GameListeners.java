@@ -206,7 +206,10 @@ public class GameListeners implements Listener {
     				{
     					if(!w.isCaptured())
     					{
+    						e.setCancelled(true);
+    						e.getBlock().setType(Material.AIR);
         					wools.put(p, w.getNumber());
+        					p.getPlayer().getInventory().addItem(new ItemStack(Material.WOOL, 1, CTWTeam.RGB.getWoolColor()));
         					p.getPlayer().sendMessage(ChatColor.GOLD+"You have two minutes to place the wool in your team's monument, quick!");
             				Bukkit.getScheduler().runTaskLater(plugin, new Runnable()
     						{
@@ -219,7 +222,7 @@ public class GameListeners implements Listener {
     						}
     						p.getPlayer().setHealth(0.0);
     						w.getLocation().getBlock().setType(Material.WOOL);
-    						w.getLocation().getBlock().setData(CTWTeam.CMY.getWoolColor());
+    						w.getLocation().getBlock().setData(CTWTeam.RGB.getWoolColor());
     						GameListeners.wools.remove(p);
     					}
     						}, 120 * 20L);
@@ -250,7 +253,10 @@ public class GameListeners implements Listener {
     				{
     					if(!w.isCaptured())
     					{
+    						e.setCancelled(true);
+    						e.getBlock().setType(Material.AIR);
         					wools.put(p, w.getNumber());
+        					p.getPlayer().getInventory().addItem(new ItemStack(Material.WOOL, 1, CTWTeam.CMY.getWoolColor()));
         					p.getPlayer().sendMessage(ChatColor.GOLD+"You have two minutes to place the wool in your team's monument, quick!");
             				Bukkit.getScheduler().runTaskLater(plugin, new Runnable()
     						{
@@ -263,7 +269,7 @@ public class GameListeners implements Listener {
     						}
     						p.getPlayer().setHealth(0.0);
     						w.getLocation().getBlock().setType(Material.WOOL);
-    						w.getLocation().getBlock().setData(CTWTeam.RGB.getWoolColor());
+    						w.getLocation().getBlock().setData(CTWTeam.CMY.getWoolColor());
     						GameListeners.wools.remove(p);
     					}
     						}, 120 * 20L);
