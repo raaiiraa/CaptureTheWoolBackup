@@ -190,7 +190,7 @@ public class GameListeners implements Listener {
     	}
     	if(p.getTeam() == CTWTeam.RGB)
     	{
-    		for(Wool w : CTWTeam.RGB.getWools())
+    		for(Wool w : CTWTeam.CMY.getWools())
     		{
     			if(b.getLocation().equals(w.getLocation()))
     			{
@@ -198,7 +198,7 @@ public class GameListeners implements Listener {
     				break;
     			}
     		}
-    		for(final Wool w : CTWTeam.CMY.getWools())
+    		for(final Wool w : CTWTeam.RGB.getWools())
     		{
     			if(b.getLocation().equals(w.getLocation()))
     			{
@@ -234,7 +234,7 @@ public class GameListeners implements Listener {
     	}
     	if(p.getTeam() == CTWTeam.CMY)
     	{
-    		for(final Wool w : CTWTeam.CMY.getWools())
+    		for(final Wool w : CTWTeam.RGB.getWools())
     		{
     			if(b.getLocation().equals(w.getLocation()))
     			{
@@ -242,7 +242,7 @@ public class GameListeners implements Listener {
     				break;
     			}
     		}
-    		for(final Wool w : CTWTeam.RGB.getWools())
+    		for(final Wool w : CTWTeam.CMY.getWools())
     		{
     			if(b.getLocation().equals(w.getLocation()))
     			{
