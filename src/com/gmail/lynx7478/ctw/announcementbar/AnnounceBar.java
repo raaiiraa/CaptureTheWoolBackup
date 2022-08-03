@@ -33,7 +33,7 @@ public class AnnounceBar
         try
         {
             String version = VersionUtils.getVersion();
-            String name = "com.gmail.lynx7478.ctw.announcementbar."+version+".Bar";
+            String name = "com.gmail.lynx7478.ctw.announcementbar.versions."+version+".Bar";
             Class<?> cl = Class.forName(name);
             Class<? extends Bar> bar = cl.asSubclass(Bar.class);
             Bar manager = bar.newInstance();
